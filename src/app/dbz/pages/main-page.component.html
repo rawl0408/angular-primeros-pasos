@@ -1,0 +1,14 @@
+<h1>DBZ Main Page</h1>
+<hr>
+
+<div class="row">
+  <div class="col">
+<!-- el characterList es un atributo de entrada y se usa el @Input del componente padre, el characters es una variable que del componente padre que contiene estos datos -->
+ <!-- el onDelete es un evento @Output del componente dbz-list que llama a la función onDeleteCharacter, que este borra un elemento del array -->
+    <dbz-list [characterList]="characters" (onDelete)="onDeleteCharacter($event)"></dbz-list>
+  </div>
+
+  <div class="col">
+    <dbz-add-character (onNewcharacter)="onNewCharacter($event)" ></dbz-add-character>
+  </div>
+</div>
